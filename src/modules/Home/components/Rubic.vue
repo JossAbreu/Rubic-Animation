@@ -25,10 +25,10 @@
       />
     </div>
   </div>
-  =
+
   <Image
     src="/images/Text.png"
-    class="flex w-[20rem] absolute inset-y-0 h-[10rem] opacity-0 -translate-x-5 self-center animate-text"
+    class="flex w-[20rem] absolute inset-y-0 h-[10rem] opacity-0 translate-x-5 self-center animate-text"
   />
 </template>
 
@@ -38,53 +38,72 @@ import Image from "@atoms/Image.vue";
 
 <style scoped>
 .anim-cubes-initial {
-  animation: anim-initial 800ms linear forwards,
-    cube-br 900ms 1400ms linear forwards;
+  animation: left 1s 900ms normal forwards;
 }
 .anim-cube-lt {
-  animation: cube-lt 1s 300ms normal, hide-cub 1s 3000ms normal forwards;
+  animation: cube-lt 2s 300ms normal forwards;
 }
 .anim-cube-tr {
-  animation: cube-tr 1s 400ms normal, pulse-tr 700ms 2000ms linear forwards;
+  animation: cube-tr 2s 300ms normal forwards;
 }
 .anim-cube-br {
-  animation: cube-br 1s 400ms normal, pulse-br 700ms 2300ms linear forwards;
+  animation: cube-br 3s 300ms normal forwards;
 }
 .anim-cube-lb {
-  animation: cube-lb 1s 300ms normal, pulse-lb 700ms 2600ms linear forwards;
+  animation: cube-lb 2s 300ms normal forwards;
 }
 .animate-text {
-  animation: anim-text 1s 1800ms alternate forwards,
-    pulse-text 700ms 2600ms linear forwards;
+  animation: anim-text 2s 1000ms alternate forwards;
 }
 
 @keyframes anim-text {
   0% {
-    transform: translateX(-50px);
+    transform: translateX(-100px);
     opacity: 0;
   }
-  20% {
-    opacity: 0.1;
+  50% {
+    transform: translateX(90px) scale(1);
+    opacity: 1;
   }
+  60% {
+    transform: translateX(90px) scale(1.1);
+    opacity: 1;
+  }
+
   100% {
-    transform: translateX(60px);
+    transform: translateX(90px);
     opacity: 1;
   }
 }
 @keyframes cube-lt {
   0% {
-    transform: translateX(0%) rotate(0deg) scale(1);
+    transform: translateX(0%) rotate(0deg);
   }
+  40% {
+    transform: translateX(110%) rotate(270deg) scale(1);
+  }
+
+  75% {
+    transform: translateX(110%) rotate(270deg) scale(1.1);
+  }
+
   100% {
     transform: translateX(110%) rotate(270deg) scale(1);
   }
 }
+
 @keyframes cube-tr {
   0% {
     transform: translateY(0%);
   }
+  50% {
+    transform: translateY(110%) scale(1);
+  }
+  70% {
+    transform: translateY(110%) scale(1.1);
+  }
   100% {
-    transform: translateY(110%);
+    transform: translateY(110%) scale(1);
   }
 }
 
@@ -92,84 +111,38 @@ import Image from "@atoms/Image.vue";
   0% {
     transform: translateX(0%) rotate(0deg);
   }
+
+  30% {
+    transform: translateX(-110%) rotate(270deg) scale(1);
+  }
+  55% {
+    transform: translateX(-110%) rotate(270deg) scale(1);
+  }
   100% {
-    transform: translateX(-110%) rotate(270deg);
+    transform: translateX(-110%) rotate(270deg) scale(0);
   }
 }
 @keyframes cube-lb {
   0% {
     transform: translateY(0%);
   }
-  100% {
-    transform: translateY(-110%);
-  }
-}
-@keyframes anim-initial {
-  0% {
-    transform: rotateX(0deg) rotateY(180deg) scale(0);
-  }
   40% {
-    transform: rotateX(180deg) rotateY(180deg) scale(1.4);
+    transform: translateY(-110%) scale(1);
+  }
+  45% {
+    transform: translateY(-110%) scale(1.1);
   }
   100% {
-    transform: rotateX(360deg) rotateY(360deg) scale(1);
+    transform: translateY(-110%) scale(1);
   }
 }
 
-@keyframes hide-cub {
+@keyframes left {
   0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes pulse-tr {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
+    transform: translateX(0%);
   }
   100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes pulse-br {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes pulse-lb {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes pulse-text {
-  0% {
-    transform: translateX(60px) scale(1);
-  }
-  50% {
-    transform: translateX(60px) scale(1.1);
-  }
-  100% {
-    transform: translateX(60px) scale(1);
+    transform: translateX(-110%);
   }
 }
 </style>
