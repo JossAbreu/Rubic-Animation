@@ -7,7 +7,7 @@ export const HomeRouter: RouteRecordRaw = {
   component: () => import("@modules/Home/HomePage.vue"),
   meta: {
     iconName: "Home",
-    title: "Base project- Home",
+    title: "Rubic Animation - Home",
     layout: AppLayout,
     requiresAuth: false,
   },

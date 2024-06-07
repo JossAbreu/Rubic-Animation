@@ -13,7 +13,7 @@ const router = createRouter({
 
 // set meta titles routes
 router.afterEach((to: RouteLocationNormalized) => {
-  const title: string = String(to.meta.title) || "Base project"; // Fallback to a default title if not specified
+  const title: string = String(to.meta.title) || "Rubic Animation "; // Fallback to a default title if not specified
   document.title = title;
 });
 // end set meta titles routes
