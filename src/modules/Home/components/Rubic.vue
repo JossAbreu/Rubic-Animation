@@ -18,12 +18,6 @@
         class="flex w-[5rem] h-[5rem] anim-cube-lb"
       />
     </div>
-    <div>
-      <Image
-        src="/images/Cube.png"
-        class="flex w-[5rem] h-[5rem] anim-cube-br"
-      />
-    </div>
   </div>
 
   <Image
@@ -46,9 +40,7 @@ import Image from "@atoms/Image.vue";
 .anim-cube-tr {
   animation: cube-tr 2s 300ms normal forwards;
 }
-.anim-cube-br {
-  animation: cube-br 3s 300ms normal forwards;
-}
+
 .anim-cube-lb {
   animation: cube-lb 2s 300ms normal forwards;
 }
@@ -83,7 +75,7 @@ import Image from "@atoms/Image.vue";
     transform: translateX(110%) rotate(270deg) scale(1);
   }
 
-  75% {
+  65% {
     transform: translateX(110%) rotate(270deg) scale(1.1);
   }
 
@@ -96,11 +88,11 @@ import Image from "@atoms/Image.vue";
   0% {
     transform: translateY(0%);
   }
-  50% {
+  40% {
     transform: translateY(110%) scale(1);
   }
-  70% {
-    transform: translateY(110%) scale(1.1);
+  90% {
+    transform: translateY(110%) scale(1.02);
   }
   100% {
     transform: translateY(110%) scale(1);
@@ -109,17 +101,11 @@ import Image from "@atoms/Image.vue";
 
 @keyframes cube-br {
   0% {
-    transform: translateX(0%) rotate(0deg);
+    display: flex;
   }
 
-  30% {
-    transform: translateX(-110%) rotate(270deg) scale(1);
-  }
-  55% {
-    transform: translateX(-110%) rotate(270deg) scale(1);
-  }
   100% {
-    transform: translateX(-110%) rotate(270deg) scale(0);
+    display: none;
   }
 }
 @keyframes cube-lb {
