@@ -50,7 +50,7 @@ import Image from "@atoms/Image.vue";
 
 @keyframes anim-text {
   0% {
-    transform: translateX(-100px);
+    transform: translateX(-20px);
     opacity: 0;
   }
   50% {
