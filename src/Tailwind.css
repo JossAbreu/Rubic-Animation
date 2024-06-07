@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* 
+@font-face {
+    font-family: 'FontPrimary-bold';
+    src: 
+        url('./assets/Fonts/TakenVulturesDemo.otf') format('woff2');
+    
+    
+}
+@font-face {
+    font-family: 'FontSecondary';
+    src:
+        url('./assets/Fonts/RetroSignature.otf') format('woff2');
+
+
+}
+@font-face {
+    font-family: 'FontTertiary';
+    src:
+        url('./assets/Fonts/Roboto-Light.ttf') format('woff2');
+
+
+} */
+
+ * {
+     --color-primary-scroll: 255,255, 255;
+     --bar-color: trasparent;
+     --bar-size: 5px;
+     --bar-radius: 10px;
+ 
+     --thumb-color: color-mix(in srgb, rgb(var(--color-primary-scroll)), transparent 32%);
+     --thumb-size: 5px;
+     --thumb-radius: 10px;
+
+     scrollbar-color: var(--thumb-color) var(--bar-color);
+     scrollbar-width: auto;
+ }
+ 
+
+ *::-webkit-scrollbar {
+     width: var(--bar-size);
+     height: var(--bar-size);
+ }
+
+ *::-webkit-scrollbar-track {
+     background-color: var(--bar-color);
+     border-radius: var(--bar-radius);
+ }
+
+ *::-webkit-scrollbar-thumb {
+     background-color: var(--thumb-color);
+     border-radius: var(--thumb-radius);
+     width: var(--thumb-size);
+     height: var(--thumb-size);
+ }
+
+
+
+
+
